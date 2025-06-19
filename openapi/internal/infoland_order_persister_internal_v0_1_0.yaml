@@ -11,16 +11,50 @@ info:
     url: https://ambita.com
   license:
     name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
 
 
 servers:
   - url: https://api.ambbita.com/v1
-    description: Optional server description, e.g. Main (production) server
+    description: Main (production) server
   - url: https://beta-api.ambita.com
-    description: Optional server description, e.g. Internal staging server for testing
+    description: Internal staging server for testing
+
+tags:
+  - name: orders
+  - name: assets
 
 paths:
+  /orders:
+    description: Order operations
+    get:
+      tags:
+        - orders
+    post:
+      tags:
+        - orders
+    put:
+      tags:
+        - orders
+    delete:
+      tags:
+        - orders
+
+
+  /assets:
+    description: Asset operations
+    get:
+      tags:
+        - assets
+    post:
+      tags:
+        - assets
+    put:
+      tags:
+        - assets
+    delete:
+      tags:
+        - assets
 
 components:
 
