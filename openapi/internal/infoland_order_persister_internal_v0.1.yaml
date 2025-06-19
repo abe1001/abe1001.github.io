@@ -1,0 +1,28 @@
+openapi: 3.1.1
+info:
+  title: Infoland Order Persister internal API
+  version: 0.1.0
+  summary: An API that helps us persist and manipulate orders in Infoland
+  description: Optional multiline or single-line description in [CommonMark](https://commonmark.org/help/) or HTML.
+  termsOfService: https://ambita.com/terms
+  contact:
+    name: Infoland API Support
+    email: api@ambita.com
+    url: https://ambita.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+
+servers:
+  - url: https://api.ambbita.com/v1
+    description: Optional server description, e.g. Main (production) server
+  - url: https://beta-api.ambita.com
+    description: Optional server description, e.g. Internal staging server for testing
+
+paths:
+
+components:
+
+webhooks:
+
