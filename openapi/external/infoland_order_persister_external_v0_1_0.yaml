@@ -21,9 +21,9 @@ servers:
     description: Internal staging server for testing
 
 tags:
+  - name: cart
   - name: orders
   - name: assets
-  - name: cart
 
 paths:
   /orders:
@@ -65,6 +65,17 @@ paths:
     post:
       tags:
         - cart
+      summary: Add product to the shopping cart
+      requestBody:
+        description: Coming....
+        required: true
+        content:
+          application/json:
+            schema: 
+              $ref: "#/components/schemas/Cart"
+      responses:
+        "201":
+          description: Created
     put:
       tags:
         - cart
@@ -73,6 +84,12 @@ paths:
         - cart
 
 components:
-
+  schemas:
+    Cart:
+      properties:
+        product_code:
+          type: string
+        json_data:
+          type: string
 webhooks:
 
