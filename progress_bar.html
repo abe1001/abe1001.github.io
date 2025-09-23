@@ -17,7 +17,7 @@
                 }
                 connectedCallback() {
                     console.log("Custom element added to page.");
-                    let paramName = this.getAttribute("name")
+                    let paramName = this.getAttribute("id")
                     this.textContent = currentQuery.get(paramName) + " %";
                     this.value = parseInt(currentQuery.get(paramName));
                 }
@@ -25,10 +25,24 @@
             customElements.define("output-query-param", QueryParamOutput, { extends: "progress" });
         }
     </script>
+    <style>
+        body {
+            background: #eee;
+            margin: 0;
+        }
+
+        progress {
+            width: 250px;
+            height: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
 
-    <progress is="output-query-param" name="progress" id="progress" max="100"> </progress>
+    <progress is="output-query-param" id="progress" max="100"> </progress>
 
 </body>
 </html>
