@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Progress Bar</title>
+    <script>
+        /**
+         * Quick transplant of query param values to document body
+         * @author Sanford Whiteman, TEKNKL
+         */
+        {
+            let currentQuery = new URLSearchParams(document.location.search);
+
+            class QueryParamOutput extends HTMLProgressElement {
+                constructor() {
+                    super();
+                }
+                connectedCallback() {
+                    console.log("Custom element added to page.");
+                    let paramName = this.getAttribute("name")
+                    this.textContent = currentQuery.get(paramName) + " %";
+                    this.value = parseInt(currentQuery.get(paramName));
+                }
+            }
+            customElements.define("output-query-param", QueryParamOutput, { extends: "progress" });
+        }
+    </script>
+</head>
+<body>
+
+    <progress is="output-query-param" name="progress" id="progress" max="100"> </progress>
+
+</body>
+</html>

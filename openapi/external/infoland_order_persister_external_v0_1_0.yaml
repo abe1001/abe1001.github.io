@@ -15,7 +15,7 @@ info:
 
 
 servers:
-  - url: https://api.ambbita.com/v1
+  - url: https://api.ambita.com/v1
     description: Main (production) server
   - url: https://beta-api.ambita.com
     description: Internal staging server for testing
