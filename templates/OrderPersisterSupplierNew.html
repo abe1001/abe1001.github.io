@@ -1,0 +1,521 @@
+<!DOCTYPE htmlPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nb">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <!-- Google Fonts import -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+    <title>Ny bestilling {{id}} fra Infoland</title>
+    <style type="text/css">
+        :root {
+            color-scheme: light dark;
+            supported-color-schemes: light dark;
+        }
+        body {
+            Margin: 0 auto;
+            padding: 0;
+            font-family: PT Serif, Georgia, serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.4;
+            background-color: #F3EDF7 ;
+            color: #0D0A27;
+            min-height: 915px;
+            -webkit-font-smoothing: antialiased;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a !important;
+                color: #ffffff !important;
+            }
+            h1, h2, h3, p, td {
+                color: #ffffff !important;
+            }
+            .table-background, .wrapper {
+                background: #381C4D url('https://static.ambita.com/images/email/gradient_bg_dark.png') repeat-x !important;
+            }
+            .table-main {
+                background: #0A081F !important;
+            }
+            .dark-mode-hide {
+                display:none !important;
+            }
+            .dark-mode-show {
+                display:block !important;
+            }
+            .border-bottom {
+                border-bottom: 2px solid #F8F8F84D!important;
+            }
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+        }
+
+        td {
+            vertical-align: top;
+            padding: 0;
+        }
+
+        .img {
+            border: 0 none;
+        }
+        .table-background {
+            Margin: 0 auto;
+            width: 100%;
+            max-width: 880px;
+            background: #F3EDF7 url('https://static.ambita.com/images/email/gradient_bg.png') repeat-x;
+            height: 410px;
+            top: 0
+        }
+        .table-main {
+            background: #ffffff;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 790px;
+            padding: 20px 38px 60px;
+        }
+        .table-footer {
+            width: 100%;
+            max-width: 790px;
+            padding: 20px 38px;
+            margin-bottom: 40px;
+        }
+        /* -------------------------------------
+        BODY & CONTAINER
+        ------------------------------------- */
+        .wrapper {
+            width: 100%;
+            background: #F3EDF7 url('https://static.ambita.com/images/email/gradient_bg.png') repeat-x;
+            padding-bottom: 40px;
+            table-layout: fixed;
+        }
+
+        .outer {
+            max-width: 880px;
+        }
+
+        .container {
+            display: block;
+            Margin: 0 auto !important;
+            padding: 55px 20px 20px;
+        }
+        .content {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        .logo {
+            display: block;
+            max-height: 56px;
+        }
+        .logo-dark {
+            display: none;
+            max-height: 56px;
+        }
+        .button {
+            background-color:#381C4D;
+            text-decoration: none;
+            padding: 8px 16px;
+            color: #E9D7FF;
+            display: inline-block;
+            border-radius: 20px;
+            mso-padding-alt: 0;
+            text-underline-color: #005959
+        }
+
+        /* -------------------------------------
+        HEADER, FOOTER, MAIN
+        ------------------------------------- */
+        .footer {
+            font-family: Inter, Arial, sans-serif;
+        }
+        .ambita-orgnr {
+            margin-bottom: 16px;
+        }
+
+        /* -------------------------------------
+        TYPOGRAPHY
+        ------------------------------------- */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 1.4;
+            margin: 0 0 25px;
+        }
+        h1 {
+            color: #0D0A27;
+        }
+        p,
+        ul,
+        ol {
+            font-weight: normal;
+            margin: 0 0 15px;
+        }
+        p li,
+        ul li,
+        ol li {
+            list-style-position: inside;
+            margin-left: 5px;
+        }
+        a {
+            color: #0D0A27;
+            text-decoration: underline;
+        }
+        label {
+            font-weight: 700;
+        }
+        .centered {
+            text-align: center;
+        }
+        .to-the-right {
+            float: right;
+        }
+        .sharp {
+            font-family: Inter, Arial, sans-serif;
+        }
+        .data {
+            font-size: 14px;
+        }
+        .contact a {
+            color: #000000!important;
+            text-decoration: underline!important;
+        }
+        u + #body a {
+            color: inherit;
+            text-decoration: underline;
+            font-size: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+        }
+        /* -------------------------------------
+        OTHER STYLES THAT MIGHT BE USEFUL
+        ------------------------------------- */
+        .preheader {
+            color: transparent;
+            display: none;
+            font-size: 0;
+            line-height: 1px;
+            mso-line-height-rule: exactly;
+            max-width: 0;
+            max-height:0;
+            opacity: 0;
+            overflow:hidden;
+            mso-hide: all;
+        }
+        /* -------------------------------------
+        RESPONSIVE AND MOBILE FRIENDLY STYLES
+        ------------------------------------- */
+        @media only screen and (max-width: 824px)  {
+            .to-the-right {
+                float: none;
+            }
+        }
+
+        .cols-1, .cols-2, .cols-3 {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 0;
+        }
+        .cols-1 .column {
+            width: 100%;
+            max-width: 714px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .cols-2 .column {
+            width: 100%;
+            max-width: 357px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .cols-2 .column-l {
+            width: 100%;
+            max-width: 583px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .cols-2 .column-s {
+            width: 100%;
+            max-width: 131px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .cols-3 .column {
+            width: 100%;
+            max-width: 238px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .cols-3 .column-l {
+            width: 100%;
+            max-width: 465px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .cols-3 .column-s {
+            width: 100%;
+            max-width: 131px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .cols-3 .column-xs {
+            width: 100%;
+            max-width: 118px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .border-bottom {
+            border-bottom: 2px solid #F8F8F8;
+        }
+        .grid-pad {
+            padding: 8px 16px
+        }
+    </style>
+<body id="body">
+<center class="wrapper">
+    <div class="outer">
+        <div class="preheader"><!– Add 85-100 Characters of Preheader Text Here –></div>
+        <table role="presentation"  class="table-background">
+            <tr>
+                <td class="container">
+                    <table role="presentation" class="table-main" align="center">
+                        <!-- START CENTERED WHITE CONTAINER -->
+                        <!-- START MAIN CONTENT AREA -->
+                        <!-- ORDER NUMBER -->
+                        <tr>
+                            <td class="cols-2">
+                                <table role="presentation" class="column">
+                                    <tr>
+                                        <td class="grid-pad">
+                                            <table role="presentation" class="content">
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://static.ambita.com/images/email/Infoland_logo_2025.png" alt="Logo Infoland Ambita" class="logo dark-mode-hide"/>
+                                                        <!--[if !mso]><!-->
+                                                        <img src="https://static.ambita.com/images/email/Infoland_logo_2025_dark.png" alt="Logo Infoland Ambita" class="logo-dark dark-mode-show"/>
+                                                        <!--<![endif]-->
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table role="presentation" class="column">
+                                    <tbody class="to-the-right">
+                                    <tr>
+                                        <td class="grid-pad">
+                                            <table role="presentation" class="content">
+                                                <tr>
+                                                    <td>
+                                                        <span class="sharp">Ordrenummer</span>
+                                                        <h4>{{id}}</h4>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- TITLE -->
+                        <tr>
+                            <td class="cols-1">
+                                <div class="content centered"><h1>Ny bestilling fra Infoland</h1></div>
+                            </td>
+                        </tr>
+                        <!-- BUTTON -->
+                        <tr>
+                            <td class="cols-1">
+                                <h4 class="grid-pad content centered">
+                                    <a href="https://infoland.ambita.com/#/leveranse/{{id}}" class="button sharp">
+                                        <!--[if mso]>
+                                            <i style="mso-font-width:200%;mso-text-raise:100%" hidden>&emsp;</i>
+                                            <span style="mso-text-raise:50%;">
+                                        <![endif]-->
+                                        <img src="https://static.ambita.com/images/email/share.png" />&nbsp;
+                                        Behandle bestillingen
+                                        <!--[if mso]>
+                                            </span>
+                                            <i style="mso-font-width:200%;" hidden>&emsp;&#8203;</i>
+                                        <![endif]-->
+                                    </a>
+                                </h4>
+                            </td>
+                        </tr>
+
+                        <!-- ORDERED BY -->
+                        <tr>
+                            <td class="cols-3">
+                                <table role="presentation" class="column">
+                                    <tr>
+                                        <td class="grid-pad">
+                                            <table role="presentation" class="content">
+                                                <tr>
+                                                    <td><label>Bestilt av/melding fra</label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sharp">
+                                                        {{order_address.company_name}}<br>
+                                                        {{order_address.department_name}}<br>
+                                                        {{order_address.postal_address}}<br>
+                                                        {{order_address.postal_code}} {{order_address.postal_office}}<br>
+                                                        v/{{order_address.name}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table role="presentation" class="column">
+                                    <tr>
+                                        <td class="grid-pad">
+                                            <table role="presentation" class="content">
+                                                <tr>
+                                                    <td><label>Gjelder</label></td>
+                                                </tr>
+                                                <tr><td class="sharp">{{order_data}}</td></tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table role="presentation" class="column">
+                                    <tr>
+                                        <td class="grid-pad">
+                                            <table role="presentation" class="content">
+                                                <tr>
+                                                    <td><label>Til</label></td>
+                                                </tr>
+                                                <tr><td class="sharp">{{supplier_node.name}}</td></tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- PRODUCT TITLE -->
+                        <tr>
+                            <td class="cols-1 border-bottom">
+                                <table role="presentation" class="column">
+                                    <tr>
+                                        <td class="grid-pad">
+                                            <table role="presentation" class="content">
+                                                <tr>
+                                                    <td><label>Kunden bestilte den {{date_ordered}}</label></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- PRODUCTS -->
+                        {{#each order_items}}
+                        <tr>
+                            <td class="cols-1  border-bottom">
+                                <table role="presentation" class="column">
+                                    <tr>
+                                        <td class="grid-pad">
+                                            <table role="presentation" class="content sharp">
+                                                <tr>
+                                                    <td>
+                                                        <label>{{product_name}}</label>
+                                                        (Estimert levering: {{../date_deadline}})
+                                                        <br/>
+                                                        Saksbehandler: {{responsible_name}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        {{/each}}
+                        <!-- INFO -->
+                        <tr>
+                            <td class="cols-1 border-bottom">
+                                <div class="grid-pad content centered sharp">Dette er en automatisk generert melding, vennligst ikke svar på denne.</div>
+                            </td>
+                        </tr>
+                        <!-- END MAIN CONTENT AREA -->
+                        <!-- END CENTERED WHITE CONTAINER -->
+                    </table>
+                    <table role="presentation" class="table-footer" align="center"  >
+                        <!-- START FOOTER -->
+                        <tr>
+                            <td class="cols-3 footer">
+                                <table role="presentation" class="column">
+                                    <tr>
+                                        <td class="grid-pad">
+                                            <table role="presentation" class="content">
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://static.ambita.com/images/email/Ambita_logo_2025.png" alt="Logo Infoland Ambita" class="logo dark-mode-hide" height="28"/>
+                                                        <!--[if !mso]><!-->
+                                                        <img src="https://static.ambita.com/images/email/Ambita_logo_2025_dark.png" alt="Logo Infoland Ambita" class="logo-dark dark-mode-show" height="28"/>
+                                                        <!--<![endif]-->
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table role="presentation" class="column">
+                                    <tr>
+                                        <td class="grid-pad">
+                                            <table role="presentation" class="content">
+                                                <tr>
+                                                    <td>
+                                                        Kundeservice<br>
+                                                        (+47) 24 13 35 50<br>
+                                                        <a href="mailto:support@ambita.com?subject=Ordrebekreftelse Infoland {{id}}" rel="noopener">support@ambita.com</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table role="presentation" class="column">
+                                    <tr>
+                                        <td class="grid-pad">
+                                            <table role="presentation" class="content">
+                                                <tr>
+                                                    <td>
+                                                        NO 945 811 714 MVA
+                                                        <br/><br/>
+                                                        Dronning Mauds gate 10<br>
+                                                        Postboks 2923 Solli<br>
+                                                        0230 Oslo<br>
+                                                        Norge
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- END FOOTER -->
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</center>
+</body>
+</html>
