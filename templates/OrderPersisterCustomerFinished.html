@@ -181,6 +181,7 @@
         ol li {
             list-style-position: inside;
             margin-left: 5px;
+            list-style-type: none;
         }
         a {
             color: #0D0A27;
@@ -445,7 +446,7 @@
                                         <td class="grid-pad">
                                             <table role="presentation" class="content">
                                                 <tr>
-                                                    <td><label>Produkt</label></td>
+                                                    <td class="list-title">Du har bestilt</td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -481,6 +482,11 @@
                                                         <td class="sharp">
                                                             <label>{{product_name}}</label><br/>
                                                             Fra {{../supplier_node.name}} <br/>
+                                                            <ul>
+                                                            {{#each item_files}}
+                                                                <li>{{filename}}</li>
+                                                            {{/each}}
+                                                            </ul>
                                                         </td>
                                                     </tr>
                                                 </table>
