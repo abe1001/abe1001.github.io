@@ -9,7 +9,7 @@
     <!-- Google Fonts import -->
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
-    <title>Ny bestilling {{id}} fra Infoland</title>
+    <title>Ny melding om Infoland-ordre {{id}}</title>
     <style type="text/css">
         :root {
             color-scheme: light dark;
@@ -52,6 +52,12 @@
             }
             .border-bottom {
                 border-bottom: 2px solid #F8F8F84D!important;
+            }
+            .info-card {
+                background: #DEB9F9 !important;
+            }
+            .info-card td {
+                color: #000000 !important;
             }
         }
 
@@ -122,11 +128,17 @@
             display: none;
             max-height: 56px;
         }
+        .icon {
+            display: block;
+            max-height: 40px;
+            margin-right: 42px;
+            margin-top: 5px;
+        }
         .button {
             background-color:#381C4D;
-            text-decoration: none;
+            text-decoration: none !important;
             padding: 8px 16px;
-            color: #E9D7FF;
+            color: #E9D7FF !important;
             display: inline-block;
             border-radius: 20px;
             mso-padding-alt: 0;
@@ -183,11 +195,14 @@
         .to-the-right {
             float: right;
         }
+        .list-title {
+            font-size: 20px;
+        }
         .sharp {
             font-family: Inter, Arial, sans-serif;
         }
         .data {
-            font-size: 14px;
+            font-size: 12px;
         }
         .contact a {
             color: #000000!important;
@@ -284,6 +299,14 @@
         .grid-pad {
             padding: 8px 16px
         }
+        .info-pad {
+            padding: 14px 0 14px;
+        }
+        .info-card {
+            background: #F3EDF7;
+            border-radius: 10px;
+            padding: 30px 42px;
+        }
     </style>
 <body id="body">
 <center class="wrapper">
@@ -335,26 +358,7 @@
                         <!-- TITLE -->
                         <tr>
                             <td class="cols-1">
-                                <div class="content centered"><h1>Ny bestilling fra Infoland</h1></div>
-                            </td>
-                        </tr>
-                        <!-- BUTTON -->
-                        <tr>
-                            <td class="cols-1">
-                                <h4 class="grid-pad content centered">
-                                    <a href="https://infoland.ambita.com/#/leveranse/{{id}}" class="button sharp">
-                                        <!--[if mso]>
-                                            <i style="mso-font-width:200%;mso-text-raise:100%" hidden>&emsp;</i>
-                                            <span style="mso-text-raise:50%;">
-                                        <![endif]-->
-                                        <img src="https://static.ambita.com/images/email/share.png" />&nbsp;
-                                        Behandle bestillingen
-                                        <!--[if mso]>
-                                            </span>
-                                            <i style="mso-font-width:200%;" hidden>&emsp;&#8203;</i>
-                                        <![endif]-->
-                                    </a>
-                                </h4>
+                                <div class="content centered"><h1>Ny melding om Infoland-ordre</h1></div>
                             </td>
                         </tr>
 
@@ -415,7 +419,7 @@
                                         <td class="grid-pad">
                                             <table role="presentation" class="content">
                                                 <tr>
-                                                    <td><label>Kunden bestilte den {{date_ordered}}</label></td>
+                                                    <td>{{date_ordered}} En av våre kunde har send deg meldinger om produktet <label>{{order_item.product_name}}</label></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -424,7 +428,7 @@
                             </td>
                         </tr>
                         <!-- PRODUCTS -->
-                        {{#each order_items}}
+                        {{#each order_item.customer_messages}}
                         <tr>
                             <td class="cols-1  border-bottom">
                                 <table role="presentation" class="column">
@@ -433,10 +437,7 @@
                                             <table role="presentation" class="content sharp">
                                                 <tr>
                                                     <td>
-                                                        <label>{{product_name}}</label>
-                                                        (Estimert levering: {{../date_deadline}})
-                                                        <br/>
-                                                        Saksbehandler: {{responsible_name}}
+                                                        <label>"{{message}}"</label>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -448,7 +449,7 @@
                         {{/each}}
                         <!-- INFO -->
                         <tr>
-                            <td class="cols-1 border-bottom">
+                            <td class="cols-1 border-bottom info-pad">
                                 <div class="grid-pad content centered sharp">Dette er en automatisk generert melding, vennligst ikke svar på denne.</div>
                             </td>
                         </tr>
