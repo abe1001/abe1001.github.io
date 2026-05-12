@@ -53,6 +53,12 @@
             .border-bottom {
                 border-bottom: 2px solid #F8F8F84D!important;
             }
+            .info-card {
+                background: #DEB9F9 !important;
+            }
+            .info-card td {
+                color: #000000 !important;
+            }
         }
 
         table {
@@ -122,11 +128,17 @@
             display: none;
             max-height: 56px;
         }
+        .icon {
+            display: block;
+            max-height: 40px;
+            margin-right: 42px;
+            margin-top: 5px;
+        }
         .button {
             background-color:#381C4D;
-            text-decoration: none;
+            text-decoration: none !important;
             padding: 8px 16px;
-            color: #E9D7FF;
+            color: #E9D7FF !important;
             display: inline-block;
             border-radius: 20px;
             mso-padding-alt: 0;
@@ -183,11 +195,14 @@
         .to-the-right {
             float: right;
         }
+        .list-title {
+            font-size: 20px;
+        }
         .sharp {
             font-family: Inter, Arial, sans-serif;
         }
         .data {
-            font-size: 14px;
+            font-size: 12px;
         }
         .contact a {
             color: #000000!important;
@@ -283,6 +298,14 @@
         }
         .grid-pad {
             padding: 8px 16px
+        }
+        .info-pad {
+            padding: 14px 0 14px;
+        }
+        .info-card {
+            background: #F3EDF7;
+            border-radius: 10px;
+            padding: 30px 42px;
         }
     </style>
 <body id="body">
@@ -415,7 +438,7 @@
                                         <td class="grid-pad">
                                             <table role="presentation" class="content">
                                                 <tr>
-                                                    <td><label>Kunden bestilte den {{date_ordered}}</label></td>
+                                                    <td class="list-title">Kunden bestilte den {{date_ordered}}</td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -434,7 +457,7 @@
                                                 <tr>
                                                     <td>
                                                         <label>{{product_name}}</label>
-                                                        (Estimert levering: {{../date_deadline}})
+                                                        (maks {{../date_deadline}} virkedager)
                                                         <br/>
                                                         Saksbehandler: {{responsible_name}}
                                                     </td>
